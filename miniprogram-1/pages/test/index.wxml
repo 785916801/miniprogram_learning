@@ -2,25 +2,22 @@
 <view class="content">
   <view class="today">
     <view class="info">
-      <view class="temp">{{tempMin}}℃</view>
+      <view class="temp">{{temp}}℃</view>
       <view class="lowhigh">{{low}}/{{high}}</view>
       <view class="type">{{type}}</view>
-      <view class="city">{{wind}}</view>
-      <view class="week">{{week}}</view>
-      <view class="weather">{{weather}}</view>
+      <view class="wind">{{windDir}}{{windScale}}级</view>
     </view>
   </view>
 </view>
 <view class="hr"></view>
 
-<scroll-view class="weather-list" scroll-x  >
-  <block wx:for="{{weatherData}}" wx:key="index">
+<scroll-view class="weather-list" scroll-x scroll-into-view="{{scrollIntoView}}">
+  <block wx:for="{{daily}}" wx:key="index">
     <view class="weather-item">
-      <view>{{item.weather}}</view>
-      <view>{{item.high}}/{{item.low}}</view>
-      <view>{{item.date}}</view>
-      <view>{{item.airQuality}}</view>
-      <view>{{item.wind}}</view>
+      <view>{{item.textDay}}</view>
+      <view>{{item.tempMax}}/{{item.tempMin}}</view>
+      <view>{{item.fxDate}}</view>
+      <view>{{item.windDirDay}}{{item.windScaleDay}}级</view>
     </view>
     </block>
 </scroll-view>

@@ -1,32 +1,50 @@
-// pages/class/index.js
-import data from "../../data/data"
 Page({
-  data: {
-    temp:"11.4",
-    low:"8.1",
-    high:"19.1",
-    type:"大雾",
-    city:"下北泽",
-    week:"疯狂星期四",
-    weather:"天气好得很",
-    weatherData: [],
-    testData:[]
+  now: {
+    temp:"",
+    low:"",
+    high:"",
+    type:"",
+    windDir:"",
+    windScale:"",
+    weather:"",
   },
-  onLoad(options) {
-    let _this = this
+  getnowWeather: function() {
+    var that = this
     wx.request({
-      url: 'https://geoapi.qweather.com/v2/city/lookup',
-      data:{
+      url: 'https://devapi.qweather.com/v7/weather/now?',
+      data: {
         location:101280109,
         key:'f924bd0c1fd3445aa1dbeeb6afe78639'
       },
-      success:function(res){
-        _this.setData({testData:res})
-        
+      success: function(res) {
+        that.setData({
+          temp: res.data.now.temp,
+          type: res.data.now.text,
+          windDir: res.data.now.windDir,
+          windScale: res.data.now.windScale
+        })
       }
     })
-    this.setData({
-      weatherData: data
+  },
+  get7dWeather: function() {
+    var that = this
+    wx.request({
+      url: 'https://devapi.qweather.com/v7/weather/7d?',
+      data: {
+        location:101280109,
+        key:'f924bd0c1fd3445aa1dbeeb6afe78639'
+      },
+      success: function(res) {
+        that.setData({
+          daily: res.data.daily,
+          low: res.data.daily[0].tempMin,
+          high: res.data.daily[0].tempMax,
+        })
+      }
     })
-  }
+  },
+  onLoad:function () {
+    this.getnowWeather()
+    this.get7dWeather()
+  },
 })
