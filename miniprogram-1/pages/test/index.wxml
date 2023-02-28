@@ -21,11 +21,3 @@
     </view>
     </block>
 </scroll-view>
-<!-- <scroll-view class="scroll-view" scroll-x="{{true}}">
-<block wx:for="{{[1,1,4,5,1,4,1,9,1,9,8,1,0]}}" wx:key="index">
-<view class="item">{{item}}</view>
-</block></scroll-view>
-<scroll-view class="scroll-view2" scroll-y="{{true}}">
-<block wx:for="{{[1,1,4,5,1,4,1,9,1,9,8,1,0]}}" wx:key="index">
-<view class="item2">{{item}}</view>
-</block></scroll-view> -->
