@@ -1,0 +1,34 @@
+<image class="bg" src="../../images/weather.jpg" mode="widthFix" />
+<view class="content">
+  <view class="today">
+    <view class="info">
+      <view class="temp">{{tempMin}}℃</view>
+      <view class="lowhigh">{{low}}/{{high}}</view>
+      <view class="type">{{type}}</view>
+      <view class="city">{{wind}}</view>
+      <view class="week">{{week}}</view>
+      <view class="weather">{{weather}}</view>
+    </view>
+  </view>
+</view>
+<view class="hr"></view>
+
+<scroll-view class="weather-list" scroll-x  >
+  <block wx:for="{{weatherData}}" wx:key="index">
+    <view class="weather-item">
+      <view>{{item.weather}}</view>
+      <view>{{item.high}}/{{item.low}}</view>
+      <view>{{item.date}}</view>
+      <view>{{item.airQuality}}</view>
+      <view>{{item.wind}}</view>
+    </view>
+    </block>
+</scroll-view>
+<!-- <scroll-view class="scroll-view" scroll-x="{{true}}">
+<block wx:for="{{[1,1,4,5,1,4,1,9,1,9,8,1,0]}}" wx:key="index">
+<view class="item">{{item}}</view>
+</block></scroll-view>
+<scroll-view class="scroll-view2" scroll-y="{{true}}">
+<block wx:for="{{[1,1,4,5,1,4,1,9,1,9,8,1,0]}}" wx:key="index">
+<view class="item2">{{item}}</view>
+</block></scroll-view> -->

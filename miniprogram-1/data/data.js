@@ -1,0 +1,165 @@
+let data =[
+      {
+        "city": "上海",
+        "lastUpdateTime": "2022-06-08 16:55:08",
+        "date": "2022-06-08",
+        "weather": "多云",
+        "temp": 27.0,
+        "humidity": "42%",
+        "wind": "西风2级",
+        "pm25": 19.0,
+        "pm10": 25.0,
+        "low": 20.0,
+        "high": 28.0,
+        "airData": "43",
+        "airQuality": "优",
+        "dateLong": 1654617600000,
+        "weatherType": 1,
+        "windLevel": 2,
+        "province": "上海",
+        "moreData": {
+          "sunrise": "2022-06-08 04:50:00",
+          "sunset": "2022-06-08 18:57:00",
+          "precipitation": "0",
+          "alert": null
+        }
+      },
+      {
+        "city": "上海",
+        "lastUpdateTime": "2022-06-08 16:09:00",
+        "date": "2022-06-09",
+        "weather": "晴",
+        "humidity": "未知",
+        "wind": "南风",
+        "pm25": 0.0,
+        "low": 20.0,
+        "high": 25.0,
+        "airData": "59",
+        "airQuality": "良",
+        "dateLong": 1654704000000,
+        "weatherType": 0,
+        "windLevel": 3,
+        "province": "上海",
+        "moreData": {
+          "sunrise": "2022-06-09 04:49:00",
+          "sunset": "2022-06-09 18:57:00",
+          "precipitation": null,
+          "alert": null
+        }
+      },
+      {
+        "city": "上海",
+        "lastUpdateTime": "2022-06-08 16:09:00",
+        "date": "2022-06-10",
+        "weather": "大雨",
+        "humidity": "未知",
+        "wind": "东南风",
+        "pm25": 0.0,
+        "low": 20.0,
+        "high": 22.0,
+        "airData": "46",
+        "airQuality": "优",
+        "dateLong": 1654790400000,
+        "weatherType": 9,
+        "windLevel": 3,
+        "province": "上海",
+        "moreData": {
+          "sunrise": "2022-06-10 04:49:00",
+          "sunset": "2022-06-10 18:58:00",
+          "precipitation": null,
+          "alert": null
+        }
+      },
+      {
+        "city": "上海",
+        "lastUpdateTime": "2022-06-08 16:09:00",
+        "date": "2022-06-11",
+        "weather": "多云",
+        "humidity": "未知",
+        "wind": "东风",
+        "pm25": 0.0,
+        "low": 20.0,
+        "high": 26.0,
+        "airData": "49",
+        "airQuality": "优",
+        "dateLong": 1654876800000,
+        "weatherType": 1,
+        "windLevel": 3,
+        "province": "上海",
+        "moreData": {
+          "sunrise": "2022-06-11 04:49:00",
+          "sunset": "2022-06-11 18:58:00",
+          "precipitation": null,
+          "alert": null
+        }
+      },
+      {
+        "city": "上海",
+        "lastUpdateTime": "2022-06-08 16:09:00",
+        "date": "2022-06-12",
+        "weather": "小雨",
+        "humidity": "未知",
+        "wind": "东南风",
+        "pm25": 0.0,
+        "low": 20.0,
+        "high": 26.0,
+        "airData": "52",
+        "airQuality": "良",
+        "dateLong": 1654963200000,
+        "weatherType": 7,
+        "windLevel": 3,
+        "province": "上海",
+        "moreData": {
+          "sunrise": "2022-06-12 04:49:00",
+          "sunset": "2022-06-12 18:58:00",
+          "precipitation": null,
+          "alert": null
+        }
+      },
+      {
+        "city": "上海",
+        "lastUpdateTime": "2022-06-08 16:09:00",
+        "date": "2022-06-13",
+        "weather": "小雨",
+        "humidity": "未知",
+        "wind": "东风",
+        "pm25": 0.0,
+        "low": 20.0,
+        "high": 27.0,
+        "airData": "46",
+        "airQuality": "优",
+        "dateLong": 1655049600000,
+        "weatherType": 7,
+        "windLevel": 3,
+        "province": "上海",
+        "moreData": {
+          "sunrise": "2022-06-13 04:49:00",
+          "sunset": "2022-06-13 18:59:00",
+          "precipitation": null,
+          "alert": null
+        }
+      },
+      {
+        "city": "上海",
+        "lastUpdateTime": "2022-06-08 16:09:00",
+        "date": "2022-06-14",
+        "weather": "阴",
+        "humidity": "未知",
+        "wind": "东南风",
+        "pm25": 0.0,
+        "low": 21.0,
+        "high": 26.0,
+        "airQuality": "未知",
+        "dateLong": 1655136000000,
+        "weatherType": 2,
+        "windLevel": 4,
+        "province": "上海",
+        "moreData": {
+          "sunrise": "2022-06-14 04:50:00",
+          "sunset": "2022-06-14 18:59:00",
+          "precipitation": null,
+          "alert": null
+        }
+      }
+    ]
+export default data
