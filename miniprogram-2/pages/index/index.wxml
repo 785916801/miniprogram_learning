@@ -1,0 +1,7 @@
+<swiper autoplay interval="2000" circular indicator-dots>
+    <block wx:for="{{[1,2,3]}}" wx:key="index">
+        <swiper-item>
+            <view class="item{{index}}"></view>
+        </swiper-item>
+    </block>
+</swiper>
