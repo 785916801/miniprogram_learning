@@ -1,0 +1,11 @@
+<scroll-view style="height:{{windowHeight}}px;" scroll-y scroll-into-view="a2">
+<block wx:for="{{data}}" wx:key="index">
+    <view id="a{{index+1}}" class="item_class">{{item.class}}</view>
+    <block wx:for="{{item.items}}" wx:for-item="item2" wx:for-index="index2" wx:key="index2">
+        <view class="item">
+        <image class="icon" src="../../images/1.jpg" mode="aspectFill"/>
+        <view class="item_text">{{item2}}</view>
+        </view>
+    </block>
+</block>
+</scroll-view>
