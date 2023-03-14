@@ -8,7 +8,14 @@ App({
         {class:"D",items:["Daisy","Dora","Doris"]},
         {class:"E",items:["Ella","Eva","Eve"]},
         {class:"F",items:["Fiona","Fanny","Fiona"]},
-        {class:"G",items:["Gina","Gloria","Gemma"]}
+        {class:"G",items:["Gina","Gloria","Gemma"]},
+        {class:"H",items:["Helen","Hanna","Hannah"]},
+        {class:"I",items:["Iris","Ivy","Irene"]},
+        {class:"J",items:["Jenny","Jenny","Jenny"]},
+        {class:"K",items:["Kitty","Kathy","Katie"]},
+        {class:"L",items:["Lily","Linda","Lisa"]},
+        {class:"M",items:["Mandy","Mike","Marry"]},
+        {class:"N",items:["Nancy","Nina","Nike"]},
     ]
 }}
 )

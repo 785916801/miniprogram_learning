@@ -1,6 +1,12 @@
-<scroll-view style="height:{{windowHeight}}px;" scroll-y scroll-into-view="a2">
+<view class="list">
+    <block wx:for="{{data}}" wx:key="index">
+        <view bindtap="itemClick" data-index="{{index}}">{{item.class}}</view>
+    </block>
+</view>
+
+<scroll-view style="height:{{windowHeight}}px;" scroll-y scroll-into-view="{{id}}">
 <block wx:for="{{data}}" wx:key="index">
-    <view id="a{{index+1}}" class="item_class">{{item.class}}</view>
+    <view id="a{{index}}" class="item_class">{{item.class}}</view>
     <block wx:for="{{item.items}}" wx:for-item="item2" wx:for-index="index2" wx:key="index2">
         <view class="item">
         <image class="icon" src="../../images/1.jpg" mode="aspectFill"/>

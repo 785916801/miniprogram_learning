@@ -7,8 +7,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        data:[]
-
+        data:[],
+        windowHeight:0,
+        id:"a0",
     },
 
     /**
@@ -18,13 +19,18 @@ Page({
         let _this = this;
         wx.getSystemInfo({
             success:function(res){
-                _this.setData({data:res});
                 //设置windowHeight为获取到的高度值
                 _this.setData({windowHeight:res.windowHeight});
             }
         })
         this.setData({data:globalData.data});
     },
+    itemClick:function(e){
+        const index = e.currentTarget.dataset.index;
+        const id = 'a' + index;
+        this.setData({id});
+    },
+
 
     /**
      * 生命周期函数--监听页面初次渲染完成
