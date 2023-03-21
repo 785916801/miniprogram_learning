@@ -1,3 +1,33 @@
-.mvList{
+.item{
+    width: 100%;
+}
+.content{
+    position: relative;
+}
+.cover{
+    width: 100%;
+    z-index: -1;
+    height: 200rpx;
+    border-radius: 20rpx;
+}
+.mvInfo{
+    width: 100%;
+    position: absolute;
+    bottom: 5rpx;
     display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.bottom{
+    text-overflow: collapse;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-line-clamp: 1;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    white-space: normal;
 }

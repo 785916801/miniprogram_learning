@@ -1,3 +1,5 @@
-<view class="mvList" wx:for="{{mvData}}" wx:key="id">
+<view class="mvList">
+    <view class="item" wx:for="{{mvData}}" wx:key="id">
     <mv_item item="{{item}}"></mv_item>
+</view>
 </view>
