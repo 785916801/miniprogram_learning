@@ -1,15 +1,11 @@
 // pages/index/index.js
-
-let globalData = getApp().globalData;
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        data:[],
-        windowHeight:0,
-        id:"a0",
+
     },
 
     /**
@@ -17,20 +13,16 @@ Page({
      */
     onLoad(options) {
         let _this = this;
-        wx.getSystemInfo({
+        wx.request({
+            url:'http://192.168.236.164:3000/related/allvideo?id=14612471',
+            data:{},
+            method:'GET',
             success:function(res){
-                //设置windowHeight为获取到的高度值
-                _this.setData({windowHeight:res.windowHeight});
+                console.log(res)
+                _this.setData({res:res.data.data})
             }
         })
-        this.setData({data:globalData.data});
     },
-    itemClick:function(e){
-        const index = e.currentTarget.dataset.index;
-        const id = 'a' + index;
-        this.setData({id:id});
-    },
-
 
     /**
      * 生命周期函数--监听页面初次渲染完成
