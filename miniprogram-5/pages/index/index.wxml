@@ -1,4 +1,3 @@
-<!--index.wxml-->
-<view class="container">
-  Weixin
+<view class="mvList" wx:for="{{mvData}}" wx:key="id">
+    <mv_item item="{{item}}"></mv_item>
 </view>

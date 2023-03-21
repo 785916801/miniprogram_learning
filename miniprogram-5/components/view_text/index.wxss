@@ -1,0 +1,5 @@
+/* components/view_text/index.wxss */
+.text{
+    font-size: 50rpx;
+    color:red;
+}

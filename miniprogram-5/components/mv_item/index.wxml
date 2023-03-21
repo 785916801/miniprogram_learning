@@ -1,0 +1,12 @@
+<view class="item">
+    <view class="content">
+        <image src="{{item.cover}}" mode="aspectFill"/>
+        <view class="mvInfo">
+            <text>{{item.playCount}}</text>
+            <text>{{item.mv.videos[0].duration}}</text>
+        </view>
+        <view class="bottom">
+            <text class="name">{{item.artistName}}</text>-<text class="author">{{item.artists[1].name}}</text>
+        </view>
+    </view>
+</view>

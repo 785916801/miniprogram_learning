@@ -1,4 +1,3 @@
-/* pages/index/index.wxss */
 .mvList{
     display: flex;
 }
