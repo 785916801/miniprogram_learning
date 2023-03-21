@@ -1,0 +1,11 @@
+function formatCount(count){
+    var counter=parseInt(count)
+    if(counter>10000){
+        return (counter/10000).toFixed(1)+"萬";
+    }else{
+        return counter;
+    }
+}
+module.exports={
+    formatCount:formatCount
+}

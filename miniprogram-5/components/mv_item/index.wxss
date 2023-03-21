@@ -8,7 +8,7 @@
     width: 100%;
     z-index: -1;
     height: 200rpx;
-    border-radius: 20rpx;
+    border-radius: 18rpx;
 }
 .mvInfo{
     width: 100%;

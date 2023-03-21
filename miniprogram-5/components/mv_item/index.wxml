@@ -1,8 +1,9 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
 <view class="item">
     <view class="content">
         <image src="{{item.cover}}" class="cover" mode="aspectFill"/>
         <view class="mvInfo">
-            <text>{{item.playCount}}</text>
+            <text>{{format.formatCount(item.playCount)}}</text>
             <text>{{item.mv.videos[0].duration}}</text>
         </view>
     </view>
