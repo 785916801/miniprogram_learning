@@ -27,6 +27,7 @@ Page({
         const id = e.currentTarget.dataset.item.id;
         wx.navigateTo({
             url: '../videoPlayer/index?id='+id,
+        console
         })
     },
     onReady() {
