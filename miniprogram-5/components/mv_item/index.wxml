@@ -3,8 +3,8 @@
     <view class="content">
         <image src="{{item.cover}}" class="cover" mode="aspectFill"/>
         <view class="mvInfo">
-            <text>{{format.formatCount(item.playCount)}}</text>
-            <text>{{item.mv.videos[0].duration}}</text>
+            <text>▶{{format.formatCount(item.playCount)}}</text>
+            <text>{{format.formatTime(item.mv.videos[0].duration)}}</text>
         </view>
     </view>
         <view class="bottom">

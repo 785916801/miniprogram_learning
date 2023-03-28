@@ -1,11 +1,24 @@
 function formatCount(count){
     var counter=parseInt(count)
     if(counter>10000){
-        return (counter/10000).toFixed(1)+"萬";
+        return (counter/10000).toFixed(1)+"万";
     }else{
         return counter;
     }
 }
+function formatTime(duration){
+    var duration=parseInt(duration/1000)
+    var minute=Math.floor(duration/60);
+    var second=duration%60;
+    if(minute<10){
+        minute="0"+minute;
+    }
+    if(second<10){
+        second="0"+second;
+    }
+    return minute+":"+second;
+}
 module.exports={
-    formatCount:formatCount
+    formatCount:formatCount,
+    formatTime:formatTime
 }
