@@ -10,6 +10,9 @@ function formatTime(duration){
     var duration=parseInt(duration/1000)
     var minute=Math.floor(duration/60);
     var second=duration%60;
+    if (minute=0){
+        minute="00";
+    }
     if(minute<10){
         minute="0"+minute;
     }
