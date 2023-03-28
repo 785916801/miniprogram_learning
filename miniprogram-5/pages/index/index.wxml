@@ -1,5 +1,5 @@
 <view class="mvList">
     <view class="item" wx:for="{{mvData}}" wx:key="id">
-    <mv_item item="{{item}}"></mv_item><!--自定义组件的每一项-->
+    <mv_item bindtap="itemClick" data-item="{{item}}" item="{{item}}"></mv_item><!--自定义组件的每一项-->
 </view>
 </view>

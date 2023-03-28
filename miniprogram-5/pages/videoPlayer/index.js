@@ -1,34 +1,36 @@
-// pages/index/index.js
+// pages/videoPlayer/index.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        mvData:[]
+        url:""
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        //top/mv
+        const id = options.id;
         let _this = this;
         wx.request({
-            url: 'http://localhost:3000/top/mv',
+            url: 'http://localhost:3000/mv/url',
+            data:{
+                id:id
+            },
+            method: 'GET',
             success: function(res){
                 _this.setData({
-                    mvData: res.data.data
+                    url: res.data.data.url
                 })
             }
         })
     },
-    itemClick:function(e){
-        const id = e.currentTarget.dataset.item.id;
-        wx.navigateTo({
-            url: '../videoPlayer/index?id='+id,
-        })
-    },
+
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
     onReady() {
 
     },

@@ -1,0 +1,4 @@
+<!--pages/videoPlayer/index.wxml-->
+<view class="container">
+  <video src="{{url}}"/>
+</view>

@@ -10,7 +10,7 @@ function formatTime(duration){
     var duration=parseInt(duration/1000)
     var minute=Math.floor(duration/60);
     var second=duration%60;
-    if (minute=0){
+    if (minute==0){
         minute="00";
     }
     if(minute<10){
@@ -19,6 +19,13 @@ function formatTime(duration){
     if(second<10){
         second="0"+second;
     }
+    //var time=padLeftZero(minute)+":"+padLeftZero(second);
+    //return padLeftZero(minute)+":"+padLeftZero(second);
+    //function padLeftZero(str) {
+    //    return ('00' + time).slice(time.length);
+    // 这段 JavaScript 代码是一个函数，它的主要作用是将传入的分钟数和秒数转换为一个格式为"00:00"的字符串。
+    // 具体来说，这个函数包含了一个内部函数 padLeftZero，它用于在数字不足两位时在前面补零。例如，如果传入的分钟数为 7，则 padLeftZero 函数会返回字符串 "07"。
+    // 主函数中的代码根据传入的分钟数和秒数，调用 padLeftZero 函数来确保它们都是两位数，并将它们拼接成一个字符串，使用冒号分隔。最后，返回这个字符串作为函数的结果。
     return minute+":"+second;
 }
 module.exports={
