@@ -1,0 +1,62 @@
+/* components/mv_related/index.wxss */
+.item{
+    width: 100%;
+}
+.content{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.cover{
+    position: relative;
+    width: 37%;
+    z-index: -1;
+    height: 160rpx;
+}
+.cover image{
+    width: 100%;
+    height: 100%;
+    border-radius: 18rpx;
+    background-color: black;
+}
+.duration{
+    /* width: 100%; */
+    position: absolute;
+    right: 10rpx;
+    bottom: 5rpx;
+    display: flex;
+    justify-content: right;
+    color: white;
+    /* flex-shrink: 0;
+    flex-grow: 0; */
+}
+
+.info{
+    width: 60%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-left: 20rpx;
+}
+.mvName{
+    font-size: 32rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.creator{
+    font-size: 24rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #999;
+}
+.playCount{
+    font-size: 24rpx;
+    color: #999;
+    margin-top: 10rpx; 
+}

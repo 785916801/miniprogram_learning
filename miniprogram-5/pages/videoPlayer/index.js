@@ -8,7 +8,10 @@ Page({
         url:"",
         name:"",
         artistAvatar:"",
-        artistName:""
+        artistName:"",
+        publishTime:"",
+        playCount:"",
+        relatedVideos:[]
     },
 
     /**
@@ -53,9 +56,20 @@ Page({
             },
             method: 'GET',
             success: function(res){
+                _this.setData({
+                    relatedVideos: res.data.data
+                })
                 console.log(res)
             }
         })
+    },
+    itemClick:function(e){
+        console.log(e);
+        const id = e.currentTarget.dataset.item.vid;
+        wx.navigateTo({
+            url: '../videoPlayer/index?id='+id,
+        })
+        console.log(url);
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

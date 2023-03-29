@@ -2,15 +2,18 @@ page{
     padding-top: 225px;
 }
 .video{
+    z-index: 1;
     position: fixed;
+    flex-wrap: nowrap;
     top:0;
     left:0;
     width: 100%;
 }
+.content{
+    margin:30rpx 30rpx 0;
+}
 .detail{
     position: relative;
-    margin-left: 40rpx;
-    margin-top: 30rpx;
 }
 .artistAvatar{
     width: 80rpx;
@@ -24,7 +27,7 @@ page{
 }
 .artistName{
     font-size: 32rpx;
-    margin-left: 40rpx;
+    margin-left: 30rpx;
 }
 .name{
     font-size: 40rpx;

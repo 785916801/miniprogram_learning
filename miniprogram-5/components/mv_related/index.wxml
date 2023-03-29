@@ -1,0 +1,14 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="item">
+    <view class="content">
+        <view class="cover">
+            <image src="{{item.coverUrl}}" mode="aspectFit"/>
+            <view class="duration">{{format.formatTime(item.durationms)}}</view>
+        </view>
+        <view class="info">
+            <view class="mvName">{{item.title}}</view>
+            <view class="creator">{{item.creator[0].userName}}</view>
+            <view class="playCount">{{format.formatCount(item.playTime)}}</view>
+        </view>
+    </view>
+</view>

@@ -1,7 +1,9 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/videoPlayer/index"
+        "pages/videoPlayer/index",
+        "components/mv_related/index",
+        "components/mv_item/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

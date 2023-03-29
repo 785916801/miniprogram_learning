@@ -1,14 +1,19 @@
 <wxs src="../../utils/format.wxs" module="format"></wxs>
-<video class="video" src="{{url}}" />
-<view class="detail">
-    <view class="artist">
-        <image class="artistAvatar" src="{{artistAvatar}}"/>
-        <view class="artistName">{{artistName}}</view>
+<video class="video" src="{{url}}" autoplay/>
+<view class="content">
+    <view class="detail">
+        <view class="artist">
+            <image class="artistAvatar" src="{{artistAvatar}}"/>
+            <view class="artistName">{{artistName}}</view>
+            </view>
+        <view class="name">{{name}}</view>
+        <view class="playCount">
+            <text>{{format.formatCount(playCount)}}次播放</text>
+            <text> · </text>
+            <text>{{publishTime}}</text>
         </view>
-    <view class="name">{{name}}</view>
-    <view class="playCount">
-        <text>{{format.formatCount(playCount)}}次播放</text>
-        <text> · </text>
-        <text>{{publishTime}}</text>
+        </view>
+    <view class="related" wx:for="{{relatedVideos}}" wx:key="id">
+        <mv_related bindtap="itemClick" data-item="{{item}}" item="{{item}}"></mv_related>
     </view>
 </view>
