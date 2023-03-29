@@ -5,7 +5,10 @@ Page({
      * 页面的初始数据
      */
     data: {
-        url:""
+        url:"",
+        name:"",
+        artistAvatar:"",
+        artistName:""
     },
 
     /**
@@ -24,6 +27,33 @@ Page({
                 _this.setData({
                     url: res.data.data.url
                 })
+            }
+        })
+        wx.request({
+            url: 'http://localhost:3000/mv/detail',
+            data:{
+                mvid:id
+            },
+            method: 'GET',
+            success: function(res){
+                console.log(res)
+                _this.setData({
+                    playCount: res.data.data.playCount,
+                    name: res.data.data.name,
+                    artistAvatar: res.data.data.artists[0].img1v1Url,
+                    artistName: res.data.data.artists[0].name,
+                    publishTime: res.data.data.publishTime
+                })
+            }
+        })
+        wx.request({
+            url: 'http://localhost:3000/related/allvideo',
+            data:{
+                id:id
+            },
+            method: 'GET',
+            success: function(res){
+                console.log(res)
             }
         })
     },

@@ -7,3 +7,30 @@ page{
     left:0;
     width: 100%;
 }
+.detail{
+    position: relative;
+    margin-left: 40rpx;
+    margin-top: 30rpx;
+}
+.artistAvatar{
+    width: 80rpx;
+    height: 80rpx;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.artist{
+    display: flex;
+    align-items: center;
+}
+.artistName{
+    font-size: 32rpx;
+    margin-left: 40rpx;
+}
+.name{
+    font-size: 40rpx;
+}
+.playCount{
+    margin-top: 8rpx;
+    font-size: 24rpx;
+    color: #999;
+}
