@@ -47,6 +47,9 @@ Page({
                     artistName: res.data.data.artists[0].name,
                     publishTime: res.data.data.publishTime
                 })
+                wx.setNavigationBarTitle({
+                    title: res.data.data.name
+                    })
             }
         })
         wx.request({

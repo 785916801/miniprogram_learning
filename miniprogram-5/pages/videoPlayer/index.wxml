@@ -1,4 +1,5 @@
 <wxs src="../../utils/format.wxs" module="format"></wxs>
+
 <video class="video" src="{{url}}" autoplay/>
 <view class="content">
     <view class="detail">

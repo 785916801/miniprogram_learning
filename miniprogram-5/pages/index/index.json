@@ -2,5 +2,6 @@
     "usingComponents": {
         "view_text" : "../../components/view_text/index",
         "mv_item": "../../components/mv_item/index"
-    }
+    },
+    "navigationBarTitleText": "MV首页"
 }
