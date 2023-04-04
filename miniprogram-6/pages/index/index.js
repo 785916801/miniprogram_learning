@@ -1,17 +1,20 @@
 // pages/index/index.js
+import {commodit} from '../../data/data'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        swiperHeight:0
+        swiperHeight:0,
+        commodit:{}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        this.setData({commodit:commodit[0].foods.slice(0,10)})
     },
     imageload:function(){
         let query=wx.createSelectorQuery();

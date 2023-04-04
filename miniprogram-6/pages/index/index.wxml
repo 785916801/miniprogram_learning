@@ -5,3 +5,37 @@
         </swiper-item>
     </block>
 </swiper>
+<view class="navBar" style="margin-top:20rpx">
+    <view class='navBar-item'>
+        <image class='icon' src='../../images/icon/maidan.png'/>
+        <text class="text">我要买单</text>
+    </view>
+    <view class='navBar-item'>
+        <image class='icon' src='../../images/icon/chongzhi.png'/>
+        <text class="text">充值</text>
+    </view>
+    <view class='navBar-item'>
+        <image class='icon' src='../../images/icon/youhuiquan.png'/>
+        <text class="text">优惠券</text>
+    </view>
+    <view class='navBar-item'>
+        <image class='icon' src='../../images/icon/huiyuanka.png'/>
+        <text class="text">会员卡</text>
+    </view>
+</view>
+<view class="title">热销推荐</view>
+<view class="list">
+    <block wx:for="{{commodit}}" wx:key="item_id">
+        <view class="list-item">
+            <image class="item_image" src="{{item.image_path}}" mode="widthFix"/>
+            <view class="info">
+                <text class="name">{{item.name}}</text>
+                <text class="count">{{item.tips}}</text>
+            </view>
+            <view class="price">
+                ￥{{item.specfoods[0].price}}
+            </view>
+            <image class="item_icon" src="../../images/icon/jiagou.png" />
+        </view>
+    </block>
+</view>
