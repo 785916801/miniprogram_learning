@@ -1,0 +1,7 @@
+<swiper autoplay indicator-dots style="height:{{swiperHeight}}px">
+    <block wx:for="{{[1,2,3,4]}}" wx:key="index">
+        <swiper-item>
+            <image class="banner" bindload="imageload" src="../../images/banner/{{item}}.jpg" mode="widthFix"/>
+        </swiper-item>
+    </block>
+</swiper>
