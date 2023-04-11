@@ -1,2 +1,32 @@
 <!--pages/classification/index.wxml-->
-<text>pages/classification/index.wxml</text>
+<view class="content">
+
+    <view class="left">
+        <block wx:for="{{commodit}}" wx:key="index">
+            <view class="leftTitle{{leftTitleIndex === index ? '.active' : ''}}" bindtap="click" data-index="{{index}}">{{item.name}}</view>
+        </block>
+    </view>
+
+    <scroll-view scroll-y scroll-into-view="{{scrollInfoView}}" style="height:{{windowHeight}}px;" class="right">
+        <block wx:for="{{commodit}}" wx:key="index">
+            <view class="rightTitle" id="a{{index}}">{{item.name}}</view>
+            <block wx:for="{{item.foods}}" wx:for-item="foodsItem"  wx:for-index="foodsIndex" wx:key="foodsIndex">
+                <view class="foods">
+                    <image class="image" src="{{foodsItem.image_path}}" mode="widthFix"/>
+                    <view class="info">
+                    <view class="name">{{foodsItem.name}}</view>
+                    <view class="price">￥{{foodsItem.specfoods[0].price}}</view>
+                    </view>
+                    <image class="jiagou" src="../../images/icon/jiagou.png" mode="widthFix"/>
+                    </view>
+            </block>
+        </block>
+    </scroll-view>
+</view>
+
+<view class="bottom">
+<view class="shoppingCar">
+<image class="icon" src="../../images/icon/gouwuche.png" mode="widthFix"/>
+<text class="count">{{shoppingDataLength}}</text>
+</view>
+</view>

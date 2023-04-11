@@ -1,18 +1,36 @@
 // pages/classification/index.js
+import {commodit} from '../../data/data'
+let shoppingData=getApp().globalData.shoppingData
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        id: 0,
+        windowHeight:'',
+        scrollInfoView: 'a0',
+        shoppingDataLength:0
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.setData({commodit,shoppingDataLength:shoppingData.length})
+        let _this = this
+        wx.getSystemInfo({
+            success:function(res){
+                _this.setData({
+                    windowHeight:res.windowHeight
+                })
+            }
+        })
+    },
+    click:function(e){
+        let leftTitleIndex=e.currentTarget.dataset.index
+        let scrollInfoView='a'+leftTitleIndex
+        this.setData({leftTitleIndex,scrollInfoView})
     },
 
     /**

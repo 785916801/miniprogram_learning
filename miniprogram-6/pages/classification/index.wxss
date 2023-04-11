@@ -1,1 +1,77 @@
 /* pages/classification/index.wxss */
+.left{
+    width: 160rpx;
+    text-align: center;
+    border: 1px solid red;
+    width: 170rpx;
+    font-size: 35rpx;
+}
+.leftTitle{
+    border-bottom: 4rpx solid #ccc;
+    height: 60rpx;
+}
+.active{
+    border-left:10rpx solid yellow;
+}
+.right{
+    margin-left: 30rpx;
+    width: 80%;
+    height: 400rpx;
+}
+.rightTitle{
+    width: 95%;
+    border:1px solid green;
+    line-height: 70rpx;
+    padding-left: 10rpx;
+}
+.content{
+    display: flex;
+}
+.foods{
+    display: flex;
+    border: 1px solid #ccc;
+    align-items: center;
+    border-radius: 20rpx;
+    box-shadow: 1px #ccc;
+    margin: 20rpx;
+}
+.foods .info{
+    flex: 1;
+    margin-left: 10rpx;
+}
+.foods .image{
+    width: 170rpx;
+    border-radius:20rpx;
+}
+.foods .jiagou{
+    width: 120rpx;
+}
+.foods .info .price{
+    color: red;
+    margin-left: 30rpx;
+    font-size: 33rpx;
+    font-weight: 1000;
+}
+.bottom{
+    position: fixed;
+    bottom: 120rpx;
+    left: 20rpx;
+}
+.bottom .shoppingCar{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+.bottom .shoppingCar .icon{
+    width: 90%;
+}
+.bottom .shoppingCar .count{
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    text-align: center;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+}
