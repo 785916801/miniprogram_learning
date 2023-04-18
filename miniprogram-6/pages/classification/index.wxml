@@ -17,7 +17,7 @@
                     <view class="name">{{foodsItem.name}}</view>
                     <view class="price">￥{{foodsItem.specfoods[0].price}}</view>
                     </view>
-                    <image class="jiagou" src="../../images/icon/jiagou.png" mode="widthFix"/>
+                    <image class="jiagou" src="../../images/icon/jiagou.png" mode="widthFix" bindtap="addShoppingCart" data-item="{{foodsItem}}"/>
                     </view>
             </block>
         </block>
@@ -26,7 +26,7 @@
 
 <view class="bottom">
 <view class="shoppingCar">
-<image class="icon" src="../../images/icon/gouwuche.png" mode="widthFix"/>
+<image class="icon" src="../../images/icon/gouwuche.png" mode="widthFix" bindtap="cartClick"/>
 <text class="count">{{shoppingDataLength}}</text>
 </view>
 </view>

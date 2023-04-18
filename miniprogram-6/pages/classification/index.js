@@ -1,5 +1,6 @@
 // pages/classification/index.js
 import {commodit} from '../../data/data'
+import {seekNum} from '../../utils/seek.js'
 let globalData=getApp().globalData
 Page({
 
@@ -23,6 +24,24 @@ Page({
         let leftTitleIndex=e.currentTarget.dataset.index
         let scrollInfoView='a'+leftTitleIndex
         this.setData({leftTitleIndex,scrollInfoView})
+    },
+    addShoppingCart:function(e){
+        const item=e.currentTarget.dataset.item
+        let flag = seekNum(item.item_id,globalData)
+        if(flag){
+            globalData.shoppingData.push({shoppingInfo:item,count:1})
+        }
+        wx.showToast({
+          title: '添加成功',
+          icon:'success',
+          duration:1000
+        })
+        this.setData({shoppingDataLength:globalData.shoppingData.length})
+    },
+    cartClick:function(){
+        wx.switchTab({
+          url: '../shoppingcart/index',
+        })
     },
 
     /**
