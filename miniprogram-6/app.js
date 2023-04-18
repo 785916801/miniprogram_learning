@@ -1,5 +1,13 @@
 // app.js
 App({
+    onLaunch(){
+        let _this = this
+        wx.getSystemInfo({
+            success:function(res){
+                    _this.globalData.windowHeight=res.windowHeight
+                }
+            })
+    },
     globalData: {
         shoppingData: [{
             shoppingInfo: {
@@ -431,6 +439,7 @@ App({
             },
             count: 2
         }
-    ]
+    ],
+    windowHeight:0
       }
 })

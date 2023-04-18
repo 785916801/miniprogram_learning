@@ -1,18 +1,20 @@
 // pages/shoppingcart/index.js
+let globalData = getApp().globalData
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        shoppingData:[],
+        windowHeight:0
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.setData({shoppingData:globalData.shoppingData,windowHeight:globalData.windowHeight})
     },
 
     /**
@@ -26,7 +28,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
+        this.setData({shoppingData:globalData.shoppingData})
     },
 
     /**

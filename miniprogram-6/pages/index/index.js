@@ -1,5 +1,7 @@
 // pages/index/index.js
+import {seekNum} from '../../utils/seek.js'
 import {commodit} from '../../data/data'
+let globalData=getApp().globalData
 Page({
 
     /**
@@ -24,7 +26,18 @@ Page({
             _this.setData({swiperHeight:res[0].height});
     })
     },
-
+    addShoppingCart:function(e){
+        const item=e.currentTarget.dataset.item
+        let flag = seekNum(item.item_id,globalData)
+        if(flag){
+            globalData.shoppingData.push({shoppingInfo:item,count:1})
+        }
+        wx.showToast({
+          title: '添加成功',
+          icon:'success',
+          duration:1000
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

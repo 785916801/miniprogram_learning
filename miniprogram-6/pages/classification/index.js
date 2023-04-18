@@ -1,6 +1,6 @@
 // pages/classification/index.js
 import {commodit} from '../../data/data'
-let shoppingData=getApp().globalData.shoppingData
+let globalData=getApp().globalData
 Page({
 
     /**
@@ -17,15 +17,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        this.setData({commodit,shoppingDataLength:shoppingData.length})
-        let _this = this
-        wx.getSystemInfo({
-            success:function(res){
-                _this.setData({
-                    windowHeight:res.windowHeight
-                })
-            }
-        })
+        this.setData({commodit,shoppingDataLength:globalData.shoppingData.length,windowHeight:globalData.windowHeight})
     },
     click:function(e){
         let leftTitleIndex=e.currentTarget.dataset.index

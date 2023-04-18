@@ -35,7 +35,7 @@
             <view class="price">
                 ￥{{item.specfoods[0].price}}
             </view>
-            <image class="item_icon" src="../../images/icon/jiagou.png" />
+            <image class="item_icon" src="../../images/icon/jiagou.png" bindtap="addShoppingCart" data-item="{{item}}"/>
         </view>
     </block>
 </view>

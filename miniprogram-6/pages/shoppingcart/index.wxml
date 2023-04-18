@@ -1,2 +1,18 @@
 <!--pages/shoppingcart/index.wxml-->
-<text>pages/shoppingcart/index.wxml</text>
+<view class="empty" style="height:{{windowHeight}}px;" wx:if="{{shoppingData.length === 0}}">购物车还是空的</view>
+
+<scroll-view class="content" wx:elif="{{shoppingData.length!==0}}" scroll-y>
+    <block wx:for="{{shoppingData}}" wx:key="index">
+        <view class="content-item">
+        <image class="shopping-icon" src="{{item.shoppingInfo.image_path}}" mode="widthFix"/>
+        <view class="name">{{item.shoppingInfo.name}}</view>
+        <view class="price">￥{{item.shoppingInfo.specfoods[0].price}}</view>
+        <view class="count">
+            <image class="count-icon" src="../../images/icon/jia.png"/>
+            <view class="count-icon">{{item.count}}</view>
+            <image class="count-icon" src="../../images/icon/jian.png"/>
+        </view>
+        <view class="delete">删除</view>
+        </view>
+    </block>
+</scroll-view>
