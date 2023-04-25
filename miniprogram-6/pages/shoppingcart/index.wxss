@@ -48,3 +48,52 @@
     font-size: 25rpx;
     color: red;
 }
+.bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+}
+.bottom .left{
+    background-color: #ddd;
+    width: 70%;
+    height: 120rpx;
+    display: flex;
+    position: relative;
+    padding-left: 30rpx;
+}
+.bottom .left .count{
+    position: absolute;
+    top: 0;
+    height: 40rpx;
+    width: 40rpx;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 25rpx;
+    text-align: center;
+    left: 100rpx;
+}
+.bottom .left .count-icon{
+    width: 90rpx;
+}
+.bottom .left .price{
+    flex: 1;
+    font-size: 50rpx;
+    font-weight: 1000;
+    color: red;
+    text-align: center;
+    line-height: 100rpx;
+    width: 160rpx;
+    height: 100rpx;
+}
+.bottom .right{
+    background-color: gold;
+    width: 30%;
+    font-size: 50rpx;
+    height: 120rpx;
+    font-weight: 1000;
+    text-align: center;
+    line-height: 100rpx;
+}

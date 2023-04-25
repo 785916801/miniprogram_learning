@@ -14,7 +14,20 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        this.setData({shoppingData:globalData.shoppingData,windowHeight:globalData.windowHeight})
+        this.setData({windowHeight:globalData.windowHeight})
+    },
+    calculate:function(){
+        if(globalData.shoppingData.length==0){
+            this.setData({
+                totalPrice:0.00
+            })
+            return
+        }
+        let totalPrice = 0.00
+        for(let item of globalData.shoppingData){
+            totalPrice=parseFloat(totalPrice)+parseFloat(item.count*item.shoppingInfo.specfoods[0].price)
+            this.setData({totalPrice:totalPrice.toFixed(2)})
+        }
     },
 
     /**
@@ -28,7 +41,8 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-        this.setData({shoppingData:globalData.shoppingData})
+        this.setData({shoppingData:globalData.shoppingData,shoppingDataLength:globalData.shoppingData.length})
+        this.calculate()
     },
 
     /**

@@ -44,7 +44,8 @@
     border-radius:20rpx;
 }
 .foods .jiagou{
-    width: 120rpx;
+    width: 90rpx;
+    margin-right: 10rpx;
 }
 .foods .info .price{
     color: red;

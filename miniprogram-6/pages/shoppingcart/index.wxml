@@ -16,3 +16,15 @@
         </view>
     </block>
 </scroll-view>
+<view class="bottom">
+    <view class="left">
+        <view class="count-info">
+        <image class="count-icon" src="../../images/icon/gouwucheman.png" mode="widthFix"/>
+        <view class="count">{{shoppingDataLength}}</view>
+        </view>
+        <view class="price">￥{{totalPrice}}</view>
+    </view>
+    <view class="right">
+    结 算
+    </view>
+</view>
