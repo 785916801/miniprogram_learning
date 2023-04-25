@@ -31,9 +31,9 @@
     font-weight: 1000
 }
 .content-item .count{
+    width: 160rpx;
     display: flex;
-    flex: 1;
-    margin-left: 20rpx;
+    margin-left: 15rpx;
 }
 .content-item .count .count-icon{
     width: 40rpx;
@@ -41,13 +41,13 @@
     text-align: center;
     line-height: 40rpx;
     font-size: 40rpx;
-    margin: 0 10rpx;
+    margin: 0 5rpx;
 }
-.content-item .delete{
+/* .content-item .delete{
     margin-right: 30rpx;
-    font-size: 25rpx;
+    font-size: 30rpx;
     color: red;
-}
+} */
 .bottom{
     position: fixed;
     bottom: 0;

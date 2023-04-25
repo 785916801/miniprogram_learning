@@ -8,11 +8,11 @@
         <view class="name">{{item.shoppingInfo.name}}</view>
         <view class="price">￥{{item.shoppingInfo.specfoods[0].price}}</view>
         <view class="count">
-            <image class="count-icon" src="../../images/icon/jia.png"/>
+            <image class="count-icon" bindtap="addAndSub" data-index="{{index}}" data-symbol="+" src="../../images/icon/jia.png"/>
             <view class="count-icon">{{item.count}}</view>
-            <image class="count-icon" src="../../images/icon/jian.png"/>
+            <image class="count-icon" data-index="{{index}}" bindtap="addAndSub" data-symbol="-" src="../../images/icon/jian.png"/>
         </view>
-        <view class="delete">删除</view>
+        <!-- <view class="delete" bindtap="delete" data-index="{{index}}">删除</view> -->
         </view>
     </block>
 </scroll-view>

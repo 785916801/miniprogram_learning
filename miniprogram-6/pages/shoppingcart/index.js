@@ -29,6 +29,38 @@ Page({
             this.setData({totalPrice:totalPrice.toFixed(2)})
         }
     },
+    delete:function(e){
+        const index = e.currentTarget.dataset.index
+        globalData.shoppingData.splice(index,1)
+        this.setData({
+            shoppingData:globalData.shoppingData,
+            shoppingDataLength:globalData.shoppingData.length
+        })
+        this.calculate()
+    },
+    addAndSub:function(e){
+        const symbol = e.currentTarget.dataset.symbol
+        const index = e.currentTarget.dataset.index
+        if(symbol === '+'){
+            if(globalData.shoppingData[index].count===99){
+                wx.showToast({
+                  title: '不能再加了',
+                  icon: 'error',
+                  duration:1000
+                })
+            }else{
+                globalData.shoppingData[index].count+=1
+            }
+        }else if(symbol === '-'){
+            if(globalData.shoppingData[index].count===1){
+                globalData.shoppingData.splice(index,1)
+            }else{
+                globalData.shoppingData[index].count-=1
+            }
+        }
+        this.calculate()
+        this.setData({shoppingData:globalData.shoppingData,shoppingDataLength:globalData.shoppingData.length})
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
