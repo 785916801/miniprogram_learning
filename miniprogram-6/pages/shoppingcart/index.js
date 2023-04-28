@@ -9,7 +9,10 @@ Page({
         shoppingData:[],
         windowHeight:0
     },
-
+    getShoppingInfo:function(){
+        this.setData({shoppingData:globalData.shoppingData,shoppingDataLength:globalData.shoppingData.length})
+        this.calculate()
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -32,11 +35,7 @@ Page({
     delete:function(e){
         const index = e.currentTarget.dataset.index
         globalData.shoppingData.splice(index,1)
-        this.setData({
-            shoppingData:globalData.shoppingData,
-            shoppingDataLength:globalData.shoppingData.length
-        })
-        this.calculate()
+        this.getShoppingInfo()
     },
     addAndSub:function(e){
         const symbol = e.currentTarget.dataset.symbol
@@ -58,8 +57,7 @@ Page({
                 globalData.shoppingData[index].count-=1
             }
         }
-        this.calculate()
-        this.setData({shoppingData:globalData.shoppingData,shoppingDataLength:globalData.shoppingData.length})
+        this.getShoppingInfo()
     },
 
     /**
@@ -73,8 +71,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-        this.setData({shoppingData:globalData.shoppingData,shoppingDataLength:globalData.shoppingData.length})
-        this.calculate()
+        this.getShoppingInfo()
     },
 
     /**
