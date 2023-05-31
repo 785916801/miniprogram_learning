@@ -1,0 +1,17 @@
+<view class="container">
+  <picker mode="date" bindchange="bindDateChange">
+    <view class="picker">
+      <text>选择目标日期</text>
+    </view>
+  </picker>
+
+  <view class="countdown">
+  <text class="label">
+    <block wx:if="{{calcDate !== null && calcDate > 0}}">距离 {{targetDate}} 还有</block>
+    <block wx:elif="{{calcDate !== null && calcDate <= 0}}">{{targetDate}} 到现在已经</block>
+  </text>
+  <text class="days">
+    <block wx:if="{{calcDate !== null}}">{{calcDate < 0 ? -calcDate : calcDate}} 天</block>
+  </text>
+</view>
+</view>

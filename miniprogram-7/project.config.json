@@ -1,5 +1,11 @@
 {
+    "appid": "wx992c2c180b1260a0",
     "compileType": "miniprogram",
+    "libVersion": "2.32.0",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
     "setting": {
         "coverView": true,
         "es6": true,
@@ -12,18 +18,11 @@
             "ignore": [],
             "disablePlugins": [],
             "outputPath": ""
-        },
-        "ignoreUploadUnusedFiles": true
+        }
     },
     "condition": {},
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
-    },
-    "libVersion": "2.30.2",
-    "packOptions": {
-        "ignore": [],
-        "include": []
-    },
-    "appid": "wx992c2c180b1260a0"
+    }
 }

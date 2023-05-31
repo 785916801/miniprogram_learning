@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+  }
+  
+  .picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20rpx;
+  }
+  
+  .picker text {
+    font-size: 18rpx;
+    color: #666;
+  }
+  
+  .countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .label {
+    font-size: 20rpx;
+    color: #666;
+  }
+  
+  .days {
+    font-size: 60rpx;
+    color: #333;
+    margin-top: 20rpx;
+  }
+  
