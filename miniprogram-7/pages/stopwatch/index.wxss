@@ -1,0 +1,42 @@
+/* index.wxss */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .time {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .start,
+  .reset,
+  .lap {
+    width: 120px;
+    height: 40px;
+    background-color: #007AFF;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .lap-list {
+    margin-top: 20px;
+    height: 200px; /* 调整滚动区域的高度 */
+    overflow-y: scroll; /* 添加滚动样式 */
+  }
+  
+  .lap-time {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  

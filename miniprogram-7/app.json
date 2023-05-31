@@ -2,7 +2,8 @@
     "pages": [
         "pages/index/index",
         "pages/countdown/index",
-        "pages/calculator/index"
+        "pages/calc/index",
+        "pages/stopwatch/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

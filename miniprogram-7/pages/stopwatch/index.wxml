@@ -1,0 +1,14 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="stopwatch">
+    <text class="time">{{ time }}</text>
+    <button class="start" bindtap="startStopwatch">{{ buttonText }}</button>
+    <button class="reset" bindtap="resetStopwatch">Reset</button>
+    <button class="lap" bindtap="recordLap">Lap</button>
+    <scroll-view class="lap-list" scroll-y="true">
+      <view wx:for="{{ lapTimes }}" wx:key="index">
+        <text class="lap-time">{{ index + 1 }}: {{ item }}</text>
+      </view>
+    </scroll-view>
+  </view>
+</view>
