@@ -9,7 +9,14 @@
             "list": [
                 {
                     "name": "",
-                    "pathName": "pages/countdown/index",
+                    "pathName": "pages/calculator/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/index/index",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
