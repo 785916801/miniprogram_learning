@@ -1,0 +1,16 @@
+<!-- pages/price/index.wxml -->
+
+<view class="container">
+  <view wx:for="{{items}}" wx:key="index">
+    <view class="item">
+      <view class="title">{{item.name}}</view>
+      <view class="platform">最佳平台：{{item.best_platform}}</view>
+      <view class="price">Buff价格：{{item.buff_price}}</view>
+      <view class="price">IGXE价格：{{item.igxe_price}}</view>
+      <view class="price">UUYP价格：{{item.uuyp_price}}</view>
+      <view class="price">C5价格：{{item.c5_price}}</view>
+      <view class="price">Steam社区市场买入价格：{{item.steam_buy_price}}</view>
+      <view class="price">Steam社区市场卖出价格：{{item.steam_sell_price}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,85 @@
+/* pages/class/index.wxss */
+.bg{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .content{
+    font-family:微软雅黑,宋体;
+    font-size: 14px;
+  }
+  .today{
+    padding-top: 70rpx;
+  }
+  .temp{
+    font-size: 80px;
+  }
+  .info{
+    text-align: center;
+  }
+  .city{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20rpx;
+  }
+  .lowhigh{
+    font-size: 12px;
+    margin-top: 10rpx;
+  }
+  .type{
+    font-size: 16px;
+    margin-top: 30rpx;
+  }
+  .week{
+    font-size: 12px;
+    margin-top: 30rpx;
+  }
+  .wind{
+    font-size: 12px;
+    margin-top: 20rpx;
+  }
+  .hr{
+    margin-top: 80px;
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+  }
+  .weather-list{
+    width: 100%;
+    white-space: nowrap;
+  }
+  .weather-item{
+    width: 90px;
+    height: 150px;
+    display: inline-block;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    vertical-align: top;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 30px;
+    margin-left: 20rpx;
+  }
+  
+  
+  /* .item{
+    width: 100rpx;
+    height: 100rpx;
+    background-color: aqua;
+    display: inline-block;
+    margin: 10rpx;
+  }
+  .item2{
+    width: 100rpx;
+    height: 100rpx;
+    background-color: aqua;
+    margin: 10rpx;
+  }
+  .scroll-view{
+    width: 100%;
+    white-space: nowrap;
+  }
+  .scroll-view2{
+    height: 600rpx;
+  } */

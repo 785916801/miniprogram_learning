@@ -1,9 +1,24 @@
 {
     "pages": [
-        "pages/index/index",
         "pages/countdown/index",
         "pages/calc/index",
-        "pages/stopwatch/index"
+        "pages/stopwatch/index",
+        "pages/calendar/index",
+        "pages/counter/index",
+        "pages/weather/index",
+        "pages/buff/index",
+        "pages/steam/index"
+    ],
+    "requiredBackgroundModes": [
+        "location"
+    ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的应用程序需要获取你的地理位置以提供更好的服务"
+        }
+    },
+    "requiredPrivateInfos": [
+        "getLocation"
     ],
     "window": {
         "backgroundTextStyle": "light",

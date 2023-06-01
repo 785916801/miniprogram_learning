@@ -1,64 +1,87 @@
 // index.js
 Page({
     data: {
-      time: '00:00:00.00',
-      buttonText: 'Start',
+      time: '00:00.00',
+      showStart: true,
+      showPause: false,
+      showReset: false,
+      showSegment: false,
       timer: null,
       startTime: null,
-      elapsedTime: 0, // 新增经过的时间
-      lapTimes: []
+      elapsedTime: 0,
+      segmentTimes: [],
+      lastSegmentTime: 0
     },
   
     startStopwatch: function () {
-      if (this.data.timer) {
-        // Pause stopwatch
-        clearInterval(this.data.timer);
-        this.setData({ timer: null, buttonText: 'Resume' });
-      } else {
-        // Start or resume stopwatch
+      const currentTime = Date.now();
+      const startTime = currentTime - this.data.elapsedTime;
+      const timer = setInterval(() => {
         const currentTime = Date.now();
-        const startTime = currentTime - this.data.elapsedTime; // 使用已经经过的时间
-        const timer = setInterval(() => {
-          const currentTime = Date.now();
-          const elapsedTime = currentTime - startTime;
-          const time = this.formatTime(elapsedTime);
+        const elapsedTime = currentTime - startTime;
+        const time = this.formatTime(elapsedTime);
   
-          this.setData({ time, elapsedTime });
-        }, 10);
+        this.setData({
+          time,
+          startTime,
+          elapsedTime,
+          showStart: false,
+          showPause: true,
+          showReset: false,
+          showSegment: true
+        });
+      }, 10);
   
-        this.setData({ timer, buttonText: 'Pause', startTime });
-      }
+      this.setData({ timer });
+    },
+  
+    pauseStopwatch: function () {
+      clearInterval(this.data.timer);
+      this.setData({
+        showStart: true,
+        showPause: false,
+        showReset: true,
+        showSegment: false
+      });
     },
   
     resetStopwatch: function () {
       clearInterval(this.data.timer);
-      this.setData({ time: '00:00:00.00', buttonText: 'Start', timer: null, startTime: null, elapsedTime: 0, lapTimes: [] });
+      this.setData({
+        time: '00:00.00',
+        showStart: true,
+        showPause: false,
+        showReset: false,
+        showSegment: false,
+        timer: null,
+        startTime: null,
+        elapsedTime: 0,
+        segmentTimes: [],
+        lastSegmentTime: 0
+      });
     },
   
     formatTime: function (milliseconds) {
-      const hours = Math.floor(milliseconds / (60 * 60 * 1000));
-      const mins = Math.floor((milliseconds % (60 * 60 * 1000)) / (60 * 1000));
-      const secs = Math.floor((milliseconds % (60 * 1000)) / 1000);
-      const millisecs = Math.floor((milliseconds % 1000) / 10);
-  
-      const formatted = [
-        hours.toString().padStart(2, '0'),
-        mins.toString().padStart(2, '0'),
-        secs.toString().padStart(2, '0'),
-        millisecs.toString().padStart(2, '0')
-      ];
-  
-      return formatted.join(':');
+        const totalMins = Math.floor(milliseconds / (60 * 1000));
+        const secs = Math.floor((milliseconds % (60 * 1000)) / 1000);
+        const millisecs = Math.floor((milliseconds % 1000) / 10);
+    
+        const formatted = [
+          totalMins.toString().padStart(2, '0'),
+          secs.toString().padStart(2, '0'),
+          millisecs.toString().padStart(2, '0')
+        ];
+    
+        return formatted.join(':');
     },
+    
   
-    recordLap: function () {
-      if (this.data.startTime) {
-        const currentTime = Date.now();
-        const elapsedTime = currentTime - this.data.startTime;
-        const lapTime = this.formatTime(elapsedTime);
-        const lapTimes = [...this.data.lapTimes, lapTime];
-        this.setData({ lapTimes });
-      }
+    recordSegment: function () {
+      const currentTime = Date.now();
+      const elapsedTime = currentTime - this.data.startTime;
+      const segmentTime = elapsedTime - this.data.lastSegmentTime;
+      const formattedSegmentTime = this.formatTime(segmentTime);
+      const segmentTimes = [formattedSegmentTime, ...this.data.segmentTimes];
+      this.setData({ segmentTimes, lastSegmentTime: elapsedTime });
     }
   });
-  

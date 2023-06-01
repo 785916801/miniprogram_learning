@@ -1,0 +1,7 @@
+function calc(steam,sell){
+        var calc = sell/steam
+        return calc.toFixed(2);
+}
+module.exports={
+    calc:calc
+}

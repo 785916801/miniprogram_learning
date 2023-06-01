@@ -1,0 +1,24 @@
+/* pages/price/index.wxss */
+
+.container {
+    padding: 20px;
+  }
+  
+  .item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .platform {
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    margin-bottom: 3px;
+  }

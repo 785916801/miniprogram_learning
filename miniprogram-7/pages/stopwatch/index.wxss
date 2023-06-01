@@ -19,7 +19,7 @@
   
   .start,
   .reset,
-  .lap {
+  .segment {
     width: 120px;
     height: 40px;
     background-color: #007AFF;
@@ -29,13 +29,13 @@
     margin-bottom: 10px;
   }
   
-  .lap-list {
+  .segment-list {
     margin-top: 20px;
     height: 200px; /* 调整滚动区域的高度 */
     overflow-y: scroll; /* 添加滚动样式 */
   }
   
-  .lap-time {
+  .segment-time {
     font-size: 16px;
     margin-bottom: 5px;
   }

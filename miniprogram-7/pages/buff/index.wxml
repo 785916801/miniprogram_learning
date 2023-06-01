@@ -1,0 +1,17 @@
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<view class="itemList">
+    <block class="buff_item" wx:for="{{items}}" wx:key="id">
+        <view class="item">
+        <image class="item_image" src="{{item.goods_info.original_icon_url}}" mode="widthFix"/>
+        <view class="item_title">{{item.name}}</view>
+        <text>求购{{item.buy_max_price}}</text>
+        <text>数量{{item.buy_num}}</text>
+        <view/>
+        <text>售价{{item.sell_min_price}}</text>
+        <text>在售{{item.sell_num}}</text>
+        <view/>
+        <text>steam价格{{item.goods_info.steam_price_cny}}</text>
+        <text>比例{{util.calc(item.goods_info.steam_price_cny,item.sell_min_price)}}</text>
+        </view>
+    </block>
+</view>

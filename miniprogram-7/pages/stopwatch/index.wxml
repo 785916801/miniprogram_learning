@@ -2,12 +2,13 @@
 <view class="container">
   <view class="stopwatch">
     <text class="time">{{ time }}</text>
-    <button class="start" bindtap="startStopwatch">{{ buttonText }}</button>
-    <button class="reset" bindtap="resetStopwatch">Reset</button>
-    <button class="lap" bindtap="recordLap">Lap</button>
-    <scroll-view class="lap-list" scroll-y="true">
-      <view wx:for="{{ lapTimes }}" wx:key="index">
-        <text class="lap-time">{{ index + 1 }}: {{ item }}</text>
+    <button class="start" bindtap="startStopwatch" wx:if="{{ showStart }}">启动</button>
+    <button class="start" bindtap="pauseStopwatch" wx:if="{{ showPause }}">停止</button>
+    <button class="reset" bindtap="resetStopwatch" wx:if="{{ showReset }}">复位</button>
+    <button class="segment" bindtap="recordSegment" wx:if="{{ showSegment }}">分段</button>
+    <scroll-view class="segment-list" scroll-y="true">
+      <view wx:for="{{ segmentTimes }}" wx:key="index">
+        <text class="segment-time">分段{{ segmentTimes.length - index }}: {{ item }}</text>
       </view>
     </scroll-view>
   </view>

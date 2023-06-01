@@ -1,0 +1,13 @@
+.itemList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.item{
+    width: 48%;
+    margin: 5rpx;
+    border: 1px solid #000;
+}
+.item_image{
+    width: 300rpx;
+}

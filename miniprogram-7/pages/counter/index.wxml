@@ -1,0 +1,7 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="count">{{count}}</view>
+  <button class="btn" bindtap="increase">增加</button>
+  <button class="btn" bindtap="decrease">减少</button>
+  <button class="btn" bindtap="reset">重置</button>
+</view>

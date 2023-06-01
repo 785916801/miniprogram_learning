@@ -1,0 +1,25 @@
+<view class="calendar">
+  <view class="calendar-header">
+    <button class="button" bindtap="prevMonth">上月</button>
+    <picker mode="date" class="picker" value="{{year}}-{{month}}" fields="month" bindchange="bindDateChange">
+      <text>{{year}}年{{month}}月</text>
+    </picker>
+    <button class="button" bindtap="nextMonth">下月</button>
+  </view>
+
+  <view class="calendar-body">
+    <view class="week">
+      <block wx:for="{{weekdays}}" wx:key="index">
+        <text class="day">{{item}}</text>
+      </block>
+    </view>
+
+    <block wx:for="{{weeks}}" wx:key="index">
+      <view class="week">
+        <block wx:for="{{item}}" wx:key="index">
+          <text class="day">{{item}}</text>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>
