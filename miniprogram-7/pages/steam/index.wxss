@@ -9,18 +9,35 @@
     padding: 10px;
     margin: 5px 20px;
 }
-  
+.buff {
+    margin-bottom: 3px;
+    display: flex;
+  }
+  .buff-text {
+    flex-grow: 1;
+    text-align: center;
+  }
+  .buff-text:first-child {
+    text-align: left;
+  }
+  .flex{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3px;
+  }
   .title {
     font-weight: bold;
     margin-bottom: 5px;
   }
-  
-  .platform {
-    margin-bottom: 5px;
+  .page .van-button {
+    width: 100%;
   }
-  
-  .price {
+  .filter-button-container {
+    width: 100%;
+  }
+  .platform {
     margin-bottom: 3px;
+    font-weight: bold;
   }
   .popup-content {
     padding: 20px;

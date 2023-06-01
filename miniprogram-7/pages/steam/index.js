@@ -8,7 +8,7 @@ Page({
         { value: 'sell', text: '最优寄售' },
       ],
       sortIndex: 0,
-      min_volume: 2,
+      min_volume: 5,
       min_price: 1,
       max_price: 5000,
       windowWidth: 0,
@@ -23,10 +23,17 @@ Page({
             windowWidth: res.windowWidth,
             windowHeight: res.windowHeight
           });
+          this.setFilterButtonWidth();
         }
       });
     },
-
+    setFilterButtonWidth: function () {
+        const screenWidth = this.data.windowWidth;
+        const buttonWidth = screenWidth - 40; // 假设左右各留出 20px 的边距
+        this.setData({
+          filterButtonWidth: buttonWidth
+        });
+      },
     onFilterButtonClick: function() {
         this.setData({ showPopup: true });
     },
@@ -61,7 +68,7 @@ Page({
             min_volume: this.data.min_volume,
             min_price: this.data.min_price,
             max_price: this.data.max_price,
-            page_size: 5,
+            page_size: 50,
         },
         success: res => {
           if (res.data.success) {

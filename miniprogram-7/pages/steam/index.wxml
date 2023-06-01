@@ -1,7 +1,7 @@
 <!-- pages/price/index.wxml -->
+<wxs src="../../utils/util.wxs" module="util"></wxs>
 <view class="container">
-    <van-button type="primary" bind:click="onFilterButtonClick">筛选</van-button>
-
+    <button bindtap="onFilterButtonClick" style="width: {{(windowWidth-40)}}px;background-color:#07c160;color: white;margin-bottom:5px;">筛选</button>
     <van-popup show="{{ showPopup }}" position="right" style="width: 70%;">
     
   <view class="popup-content">
@@ -26,13 +26,27 @@
   <view wx:for="{{items}}" wx:key="index" style="width: {{windowWidth}}px;">
     <view class="item">
       <view class="title">{{item.name}}</view>
-      <view class="platform">最佳平台：{{item.best_platform}}</view>
-      <view class="price">Buff价格：{{item.buff_price}}</view>
-      <view class="price">IGXE价格：{{item.igxe_price}}</view>
-      <view class="price">UUYP价格：{{item.uuyp_price}}</view>
-      <view class="price">C5价格：{{item.c5_price}}</view>
-      <view class="price">Steam社区市场买入价格：{{item.steam_buy_price}}</view>
-      <view class="price">Steam社区市场卖出价格：{{item.steam_sell_price}}</view>
+      <view class="platform">最佳平台：{{util.platform(item.best_platform)}}</view>
+      <view class="flex">
+      <text>最优求购：{{util.toFixed(item.optimal_buy_ratio)}}</text>
+      <text>稳定求购：{{util.toFixed(item.safe_buy_ratio)}}</text>
+      <text>最优寄售：{{util.toFixed(item.optimal_sell_ratio)}}</text>
+      </view>
+      <view class="buff">
+      <text class="buff-text">网易Buff：价格：{{util.toFixed(item.buff_price)}}</text>
+      <text class="buff-text">求购：{{item.buff_buy_num}}</text>
+      <text class="buff-text">出售：{{item.buff_sell_num}}</text>
+    </view>
+    <view class="flex">
+      <text>悠悠有品：{{util.toFixed(item.uuyp_price)}}</text>
+      <text>IGXE：{{util.toFixed(item.igxe_price)}}</text>
+      <text>C5：{{util.toFixed(item.c5_price)}}</text>
+    </view>
+    <view class="flex">
+      <text>Steam求购：{{util.toFixed(item.steam_buy_price)}}</text>
+      <text>寄售：{{util.toFixed(item.steam_sell_price)}}</text>
+      <text>日成交量：{{item.count_in_24}}</text>
+    </view>
     </view>
   </view>
 </view>

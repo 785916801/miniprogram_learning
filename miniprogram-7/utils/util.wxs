@@ -2,6 +2,28 @@ function calc(steam,sell){
         var calc = sell/steam
         return calc.toFixed(2);
 }
+function toFixed(e){
+    if (e == "9999999"){
+        return "暂无";
+    }else{
+    return e.toFixed(2);
+    }
+}
+function platform(platform) {
+    if (platform === "uuyp") {
+      return "悠悠有品";
+    } else if (platform === "buff") {
+      return "网易buff";
+    } else if (platform === "igxe") {
+        return "IGXE";
+    } else if (platform === "c5") {
+        return "C5GAME";
+    } else {
+      return platform;
+    }
+  }
 module.exports={
-    calc:calc
+    calc:calc,
+    toFixed:toFixed,
+    platform:platform
 }
