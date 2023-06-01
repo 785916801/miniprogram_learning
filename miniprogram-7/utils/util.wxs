@@ -5,7 +5,7 @@ function calc(steam,sell){
 function toFixed(e){
     if (e == "9999999"){
         return "暂无";
-    }else{
+    } else {
     return e.toFixed(2);
     }
 }
