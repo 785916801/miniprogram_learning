@@ -1,3 +1,9 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "van-sidebar": "../../components/dist/sidebar/index",
+        "van-sidebar-item": "../../components/dist/sidebar-item/index",
+        "van-popup": "../../components/dist/popup/index",
+        "van-picker": "../../components/dist/picker/index",
+        "van-button": "../../components/dist/button/index"
+    }
   }

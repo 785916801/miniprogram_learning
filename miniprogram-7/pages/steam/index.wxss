@@ -3,12 +3,12 @@
 .container {
     padding: 20px;
   }
-  
   .item {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     padding: 10px;
-  }
+    margin: 5px 20px;
+}
   
   .title {
     font-weight: bold;
@@ -22,3 +22,7 @@
   .price {
     margin-bottom: 3px;
   }
+  .popup-content {
+    padding: 20px;
+  }
+  

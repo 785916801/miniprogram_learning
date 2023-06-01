@@ -1,7 +1,29 @@
 <!-- pages/price/index.wxml -->
-
 <view class="container">
-  <view wx:for="{{items}}" wx:key="index">
+    <van-button type="primary" bind:click="onFilterButtonClick">筛选</van-button>
+
+    <van-popup show="{{ showPopup }}" position="right" style="width: 70%;">
+    
+  <view class="popup-content">
+    <view>
+        <picker bindchange="onSortChange" range="{{ sortOptions }}" range-key="text" value="{{ sortOptions[sortIndex] }}">
+        <van-button type="primary" size="small" custom-style="width: 100%;">排序方式: {{ sortOptions[sortIndex].text }}</van-button>
+        </picker>
+    </view>
+    <view>
+      最低成交量: <input bindinput="onMinVolumeInput" type="number" value="{{ min_volume }}" />
+    </view>
+    <view>
+      最低售价: <input bindinput="onMinPriceInput" type="number" value="{{ min_price }}" />
+    </view>
+    <view>
+      最高售价: <input bindinput="onMaxPriceInput" type="number" value="{{ max_price }}" />
+    </view>
+    <van-button type="primary" bind:click="onFilterApply">应用筛选</van-button>
+  </view>
+</van-popup>
+
+  <view wx:for="{{items}}" wx:key="index" style="width: {{windowWidth}}px;">
     <view class="item">
       <view class="title">{{item.name}}</view>
       <view class="platform">最佳平台：{{item.best_platform}}</view>
