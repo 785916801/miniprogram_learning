@@ -1,3 +1,4 @@
+/* pages/buff/index.wxss */
 .itemList{
     display: flex;
     flex-wrap: wrap;

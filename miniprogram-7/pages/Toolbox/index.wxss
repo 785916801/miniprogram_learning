@@ -7,9 +7,15 @@
     padding: 20px;
   }
   
-  .tool {
+  .row {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
+  }
+  
+  .tool {
+    flex-basis: 45%;
     padding: 10px;
     color: #ffffff;
     background-color: #1aad19;
