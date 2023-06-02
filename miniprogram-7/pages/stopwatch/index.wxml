@@ -1,15 +1,14 @@
 <!-- index.wxml -->
-<view class="container">
   <view class="stopwatch">
     <text class="time">{{ time }}</text>
-    <button class="start" bindtap="startStopwatch" wx:if="{{ showStart }}">启动</button>
-    <button class="start" bindtap="pauseStopwatch" wx:if="{{ showPause }}">停止</button>
-    <button class="reset" bindtap="resetStopwatch" wx:if="{{ showReset }}">复位</button>
-    <button class="segment" bindtap="recordSegment" wx:if="{{ showSegment }}">分段</button>
+    <van-button plain type="primary" class="start" bindtap="startStopwatch" wx:if="{{ showStart }}">启动</van-button>
+    <van-button plain type="danger" class="start" bindtap="pauseStopwatch" wx:if="{{ showPause }}">停止</van-button>
+    <van-button plain type="danger" class="reset" bindtap="resetStopwatch" wx:if="{{ showReset }}">复位</van-button>
+    <van-button plain type="info" class="segment" bindtap="recordSegment" wx:if="{{ showSegment }}">分段</van-button>
     <scroll-view class="segment-list" scroll-y="true">
       <view wx:for="{{ segmentTimes }}" wx:key="index">
-        <text class="segment-time">分段{{ segmentTimes.length - index }}: {{ item }}</text>
+        <view class="segment-time">分段{{ segmentTimes.length - index }}：{{ item }}</view>
+        <view class="segment-divider" wx:if="{{ index !== segmentTimes.length - 1 }}"></view>
       </view>
     </scroll-view>
   </view>
-</view>

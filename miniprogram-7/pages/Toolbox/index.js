@@ -1,4 +1,12 @@
 Page({
+    onLoad(options) {
+        let _this = this;
+        wx.getSystemInfo({
+            success:function(res){
+                _this.setData({windowHeight:res.windowHeight});
+            }
+        })
+    },
     // 事件处理函数
     navigateToCalc: function() {
       wx.navigateTo({

@@ -1,7 +1,7 @@
 <!-- index.wxml -->
 <view class="container">
   <view class="count">{{count}}</view>
-  <button class="btn" bindtap="increase">增加</button>
-  <button class="btn" bindtap="decrease">减少</button>
-  <button class="btn" bindtap="reset">重置</button>
+  <van-button plain type="info" class="btn" bindtap="increase">增加</van-button>
+  <van-button plain type="info" class="btn" bindtap="decrease">减少</van-button>
+  <van-button plain type="info" class="btn" bindtap="reset">重置</van-button>
 </view>

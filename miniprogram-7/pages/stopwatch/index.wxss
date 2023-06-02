@@ -10,33 +10,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 15vh;
   }
   
   .time {
-    font-size: 48px;
+    font-size: 60px;
     margin-bottom: 20px;
   }
   
   .start,
   .reset,
   .segment {
-    width: 120px;
-    height: 40px;
-    background-color: #007AFF;
-    color: white;
-    font-size: 18px;
-    border-radius: 4px;
     margin-bottom: 10px;
   }
   
   .segment-list {
     margin-top: 20px;
-    height: 200px; /* 调整滚动区域的高度 */
+    height: 50vh; /* 调整滚动区域的高度 */
     overflow-y: scroll; /* 添加滚动样式 */
+    width: 100vw;
+    text-align: right;
   }
   
   .segment-time {
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 18px;
+    box-sizing: content-box;
+    margin-right: 20vw;
   }
-  
+  .segment-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }

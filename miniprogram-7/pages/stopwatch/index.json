@@ -1,3 +1,6 @@
 {
-    "navigationBarTitleText": "秒表"
+    "navigationBarTitleText": "秒表",
+    "usingComponents": {
+        "van-button": "../../components/dist/button/index"
+    }
 }
