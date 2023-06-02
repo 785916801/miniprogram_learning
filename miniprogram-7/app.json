@@ -3,12 +3,32 @@
         "pages/countdown/index",
         "pages/calc/index",
         "pages/stopwatch/index",
-        "pages/calendar/index",
         "pages/counter/index",
         "pages/weather/index",
         "pages/buff/index",
-        "pages/steam/index"
+        "pages/steam/index",
+        "pages/Toolbox/index"
     ],
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/weather/index",
+                "text": "本地天气"
+            },
+            {
+                "pagePath": "pages/buff/index",
+                "text": "网易BUFF推荐商品"
+            },
+            {
+                "pagePath": "pages/steam/index",
+                "text": "换Steam余额"
+            },
+            {
+                "pagePath": "pages/Toolbox/index",
+                "text": "万能工具箱"
+            }
+        ]
+    },
     "requiredBackgroundModes": [
         "location"
     ],

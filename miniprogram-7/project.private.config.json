@@ -31,13 +31,6 @@
                 },
                 {
                     "name": "",
-                    "pathName": "pages/calendar/index",
-                    "query": "",
-                    "launchMode": "default",
-                    "scene": null
-                },
-                {
-                    "name": "",
                     "pathName": "pages/counter/index",
                     "query": "",
                     "launchMode": "default",

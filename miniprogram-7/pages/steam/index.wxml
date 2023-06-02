@@ -2,12 +2,12 @@
 <wxs src="../../utils/util.wxs" module="util"></wxs>
 <view class="container">
     <button bindtap="onFilterButtonClick" style="width: {{(windowWidth-40)}}px;background-color:#07c160;color: white;margin-bottom:5px;">筛选</button>
-    <van-popup show="{{ showPopup }}" position="right" style="width: 70%;">
+    <van-popup show="{{ showPopup }}" position="right" style="width: 70%;" closeable bind:close="onFilterClose">
     
   <view class="popup-content">
     <view>
         <picker bindchange="onSortChange" range="{{ sortOptions }}" range-key="text" value="{{ sortOptions[sortIndex] }}">
-        <van-button type="primary" size="small" custom-style="width: 100%;">排序方式: {{ sortOptions[sortIndex].text }}</van-button>
+        <van-button type="primary" size="small" custom-style="width: 100%;margin-top:25px;margin-bottom:5px">排序方式: {{ sortOptions[sortIndex].text }}</van-button>
         </picker>
     </view>
     <view>
@@ -19,7 +19,7 @@
     <view>
       最高售价: <input bindinput="onMaxPriceInput" type="number" value="{{ max_price }}" />
     </view>
-    <van-button type="primary" bind:click="onFilterApply">应用筛选</van-button>
+    <van-button type="primary" bind:click="onFilterApply" custom-style="width: 100%;margin-top:10px;">应用筛选</van-button>
   </view>
 </van-popup>
 

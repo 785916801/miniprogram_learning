@@ -5,6 +5,11 @@ Page({
     },
     onLoad(options) {
         let _this = this;
+        wx.getSystemInfo({
+            success:function(res){
+                _this.setData({windowWidth:res.windowWidth});
+            }
+        })
         wx.request({
             url:'https://buff.163.com/api/market/goods',
             data:{

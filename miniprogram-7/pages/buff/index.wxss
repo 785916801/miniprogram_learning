@@ -1,12 +1,14 @@
 .itemList{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .item{
-    width: 48%;
-    margin: 5rpx;
-    border: 1px solid #000;
+    width: 50%;
+    margin: 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 5px;
 }
 .item_image{
     width: 300rpx;

@@ -37,7 +37,9 @@ Page({
     onFilterButtonClick: function() {
         this.setData({ showPopup: true });
     },
-
+    onFilterClose: function(){
+        this.setData({ showPopup: false });
+    },
     onFilterApply: function() {
       this.setData({ showPopup: false });
       this.fetchData();

@@ -1,7 +1,7 @@
 <wxs src="../../utils/util.wxs" module="util"></wxs>
 <view class="itemList">
-    <block class="buff_item" wx:for="{{items}}" wx:key="id">
-        <view class="item">
+    <block class="buff_item" wx:for="{{items}}" wx:key="id" style="width: {{windowWidth}};">
+        <view class="item" >
         <image class="item_image" src="{{item.goods_info.original_icon_url}}" mode="widthFix"/>
         <view class="item_title">{{item.name}}</view>
         <text>求购{{item.buy_max_price}}</text>
