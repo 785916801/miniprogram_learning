@@ -1,5 +1,6 @@
 <!-- pages/buff/index.wxml-->
 <wxs src="../../utils/util.wxs" module="util"></wxs>
+<view style="text-align: center;padding:10px;background-color: #ccc;box-sizing: border-box;">点击饰品可复制网易BUFF链接</view>
 <view class="itemList">
     <block class="buff_item" wx:for="{{items}}" wx:key="id" style="width: {{windowWidth}};">
         <view class="item" data-id="{{item.id}}" bindtap="copyLink">

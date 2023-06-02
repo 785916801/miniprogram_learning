@@ -13,15 +13,15 @@
         "list": [
             {
                 "pagePath": "pages/weather/index",
-                "text": "本地天气"
+                "text": "天气预报"
             },
             {
                 "pagePath": "pages/buff/index",
-                "text": "网易BUFF推荐商品"
+                "text": "网易BUFF"
             },
             {
                 "pagePath": "pages/steam/index",
-                "text": "换Steam余额"
+                "text": "挂刀行情"
             },
             {
                 "pagePath": "pages/Toolbox/index",
