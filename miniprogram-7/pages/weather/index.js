@@ -78,7 +78,6 @@ Page({
           key:'f924bd0c1fd3445aa1dbeeb6afe78639'
         },
         success: function(res) {
-          console.log(res)
           that.setData({
             province:res.data.location[0].adm1,
             city:res.data.location[0].adm2,

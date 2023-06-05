@@ -1,6 +1,6 @@
 <view class="toollist" style="height:{{windowHeight}}">
-    <view class="tool" bindtap="navigateToCalc"><image class="item_image" src="../../images/calculator.svg"/><view>计算器</view></view>
-    <view class="tool" bindtap="navigateToCountdown"><image class="item_image" src="../../images/calendar.svg"/><view>倒数日</view></view>
-    <view class="tool" bindtap="navigateToCounter"><image class="item_image" src="../../images/counter.svg"/><view>计数器</view></view>
     <view class="tool" bindtap="navigateToStopwatch"><image class="item_image" src="../../images/stopwatch.svg"/><view>计时码表</view></view>
+    <view class="tool" bindtap="navigateToCountdown"><image class="item_image" src="../../images/calendar.svg"/><view>倒数日</view></view>
+    <view class="tool" bindtap="navigateToCalc"><image class="item_image" src="../../images/calculator.svg"/><view>计算器</view></view>
+    <view class="tool" bindtap="navigateToCounter"><image class="item_image" src="../../images/counter.svg"/><view>计数器</view></view>
 </view>

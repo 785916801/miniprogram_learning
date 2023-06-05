@@ -1,10 +1,10 @@
 {
     "pages": [
+        "pages/weather/index",
         "pages/countdown/index",
         "pages/calc/index",
         "pages/stopwatch/index",
         "pages/counter/index",
-        "pages/weather/index",
         "pages/buff/index",
         "pages/steam/index",
         "pages/Toolbox/index"
