@@ -6,6 +6,10 @@
 4. [尝试wx.request获取数据](miniprogram-4/)
 5. [mv页面with网易云音乐API](miniprogram-5/)
 6. [外卖小程序](miniprogram-6/)
+7. [结课设计](miniprogram-7/)包括以下内容
+- 天气预报
+- 网易BUFF/Steam挂刀行情
+- 实用工具（计时码表/倒数日/计算器/计时器）
 ## 获取源代码的几种方法
 ### 使用Git Clone命令
 您可以在安装了Git的电脑上打开命令提示符，输入以下命令
