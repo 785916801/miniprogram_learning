@@ -14,7 +14,7 @@
 ### 使用Git Clone命令
 您可以在安装了Git的电脑上打开命令提示符，输入以下命令
 
-`git clone https://github.com/785916801/miniprogram_learning.git`
+`git clone https://github.com/azhuquq/miniprogram_learning.git`
 
 并回车，即可获取本项目的所有源代码
 ### 下载本项目的压缩包
